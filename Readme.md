@@ -158,3 +158,28 @@ let skills: string[];
 skills[0] = 'Problem solving';
 skills[1] = 'Programming';
 ```
+
+# Typescript tuples
+
+A tuple works like an array with some additional considerations:
+
+- The number of elements in the tuple is fixed.
+- The types of elements are known, and need not to be the same.
+
+```javascript
+let skill: [string, number];
+skill = ["Programming", 5];
+```
+
+> The order of values in a tuple is important. If you change the order of values of the ``skill`` tuple to ``[5, "programming"]``, you'll get an error.
+
+### Optional tuple elements
+
+You can have optional elements specified using the question mark (?) postfix.
+
+```javascript
+let bgColor, headerColor: [number, number, number, number?];
+
+bgColor = [0, 255, 255, 0.5];
+headerColor = [0, 255, 255];
+```
