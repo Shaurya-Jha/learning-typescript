@@ -42,7 +42,7 @@
 
 ### Type annotations in variables and constants
 
-```
+```javascript
 let variable: type;
 let variable: type = value;
 const constant: type = value;
