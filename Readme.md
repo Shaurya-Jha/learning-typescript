@@ -183,3 +183,22 @@ let bgColor, headerColor: [number, number, number, number?];
 bgColor = [0, 255, 255, 0.5];
 headerColor = [0, 255, 255];
 ```
+
+# Enum
+
+An enum is a group of names constant values. Enum stands for enumerated type.
+
+To define an enum, you follow these steps: 
+
+- First, use the ``enum`` keyword followed by the name of the enum
+- Then, define constant values for the enum.
+
+```javascript
+enum name {constant1, constant2, ...};
+```
+
+### When to use enum
+
+You should use an enum when you:
+    - have a small set of fixed values that are closely related.
+    - and these values are known at compile time.
