@@ -247,3 +247,282 @@ function log(message): void{
 let useless: void = undefined;
 useless = 1;        // error
 ```
+
+# Type aliases
+
+Type aliases allow you to create a new name for an existing type. The following shows the syntax of the type alias:
+
+```javascript
+// syntax
+type alias = existingType;
+
+// creating custom type alias
+type chars = string;
+let message: chars;     // same as string type
+```
+
+It's useful to create type aliases for union types. For example:
+
+```javascript
+type alphanumeric = string | number;
+
+let input: alphanumeric;
+
+input = 100;        // valid
+input = 'Hi';       // valid
+input = false;      // false - as the alphanumeric type doesn't have boolean in union type
+```
+
+# Control flow statements
+
+## If-else
+
+1. Simple if statement
+
+```javascript
+const max = 100;
+let counter = 0;
+
+if(counter < max) {
+    counter++;
+}
+
+console.log(counter);
+```
+
+2. if...else statement
+
+```javascript
+// syntax
+if(condition){
+    // some action
+} else {
+    // other actions
+}
+
+// Example -
+const max = 100;
+let counter = 100;
+
+if(counter < max) {
+    counter++;
+} else {
+    counter = 1;
+}
+
+console.log(counter);
+```
+
+3. with ternary operator
+
+```javascript
+const max = 100;
+let counter = 100;
+
+counter < max ? counter++ : counter = 1;
+
+console.log(counter);
+```
+
+4. if...else if..else
+
+```javascript
+let discount: number;
+let itemCount = 11;
+
+if(itemCount > 0 && itemCount <= 5) {
+    discount = 5;       // 5% discount
+} else if(itemCount > 5 && itemCount <=10) {
+    discount = 10;      // 10% discount
+} else {
+    discount = 15;      // 15% discount
+}
+
+console.log(`You got ${discount}% discount`)
+```
+
+## Switch case statement
+
+1. a simple switch case example in typescript
+
+```javascript
+let targetId = 'btnDelete';
+
+switch (targetId) {
+    case 'btnUpdate':
+        console.log('Update');
+        break;
+    case 'btnDelete':
+        console.log('Delete');
+        break;
+    case 'btnNew':
+        console.log('New');
+        break;
+}
+```
+
+2. grouping case example in typescript
+
+```javascript
+// change the month and year
+let month = 2,
+    year = 2020;
+
+let day = 0;
+switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        day = 31;
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        day = 30;
+        break;
+    case 2:
+        // leap year
+        if (((year % 4 == 0) &&
+            !(year % 100 == 0))
+            || (year % 400 == 0))
+            day = 29;
+        else
+            day = 28;
+        break;
+    default:
+        throw Error('Invalid month');
+}
+
+console.log(`The month ${month} in ${year} has ${day} days`);
+```
+## For statement
+
+```javascript
+for(initialization; condition; expression) {
+    // statement
+}
+```
+
+1. simple for example -
+
+```javascript
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+```
+
+2. optional block
+
+```javascript
+let i = 0;
+for (; i < 10; i++) {
+    console.log(i);
+}
+```
+
+## while and do..while statement
+
+```javascript
+// while loop example
+let counter = 0;
+
+while (counter < 5) {
+    console.log(counter);
+    counter++;
+}
+```
+
+```javascript
+// do..while loop example
+let i = 0;
+
+do {
+    console.log(i);
+    i++
+} while (i < 10);
+
+```
+
+## break and continue statements
+
+```javascript
+// break example -
+let products = [
+    { name: 'phone', price: 700 },
+    { name: 'tablet', price: 900 },
+    { name: 'laptop', price: 1200 }
+];
+
+let discount = 0;
+let product = products[1];
+
+switch (product.name) {
+    case 'phone':
+        discount = 5;
+        break;
+    case 'tablet':
+        discount = 10;
+        break;
+    case 'laptop':
+        discount = 15;
+        break;
+}
+
+console.log(`There is a ${discount}% on ${product.name}.`);
+```
+
+```javascript
+// continue example -
+let index = -1;
+
+while (index < 9) {
+
+    index = index + 1;
+
+    if (index % 2)
+        continue;
+
+    console.log(index);
+}
+```
+
+# Functions
+
+## Functions
+
+```javascript
+// syntax of typescript function
+function name(parameter: type, parameter:type,...): returnType {
+   // do something
+}
+
+// example -
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+// try this - it will not give datatype error
+let sum = add(10, 20);
+
+// try this - it will give string to int error
+let sum = add('10', '20');
+
+console.log(sum);
+```
+
+## Function types
+
+A function type has 2 parts :
+1. parameters
+2. return type
+
+``(parameter: type, parameter: type, ...) => type``
+
+The following shows how to declare a variable which has a function type that accepts two numbers and returns a number:
+
+``let add: (x: number, y: number) => number;``
