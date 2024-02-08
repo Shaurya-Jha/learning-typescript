@@ -46,6 +46,10 @@
 let variable: type;
 let variable: type = value;
 const constant: type = value;
+
+let counter: number = 1;
+let name: string = 'John Doe'
+let isLoggedIn: boolean = false;
 ```
 
 - Example - 
