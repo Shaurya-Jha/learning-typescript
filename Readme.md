@@ -124,3 +124,22 @@ To manipulate boolean values, you use the boolean operators. They are as follows
 - AND - &&
 - OR - ||
 - NOT - !
+
+# Typescript object type
+
+The typescript ``object`` type represents all values that are not in primitive types.
+
+The following code shows how to declare a variable that holds and object:
+
+```javascript
+let employee: object;
+
+employee = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    jobTitle: 'Web developer'
+};
+
+console.log(employee);
+```
