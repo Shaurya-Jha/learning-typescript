@@ -89,3 +89,14 @@ Typescript uses the location of variables to infer their types. This mechanism i
 The main difference we can say, between type inference and type annotation is that - 
 
 - type inference guesses the type on it's own while in type annotation we explicitly tell typescript the type 
+
+# Typescript number
+
+All numbers in typescript are either floating-point values or big integers. The floating-point numbers have the type ``number`` while the big integers get the type ``bigint``.
+
+```javascript
+let price: number;
+
+// initialize the price variable to a number
+let price = 9.95;
+```
