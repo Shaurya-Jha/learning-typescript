@@ -202,3 +202,29 @@ enum name {constant1, constant2, ...};
 You should use an enum when you:
     - have a small set of fixed values that are closely related.
     - and these values are known at compile time.
+
+# Typescript any type
+
+Sometimes, you may need to store a value in a variable. But you don't know it's type at the time of writing the program. And the unknown value may come from a third-party API or user input.
+
+In this case, you want to opt out of the type checking and allow the values to pass through the compile-time check.
+
+To do so, you use the ``any`` type. The ``any`` type allows you to assign a value of any type to a variable.
+
+```javascript
+let result: any;
+
+// store number
+result = 10;
+console.log(typeof(result));
+
+// store string
+result = "Any type in typescript";
+console.log(typeof(result));
+
+// store boolean
+result = true;
+console.log(typeof(result));
+result = false;
+console.log(typeof(result));
+```
