@@ -555,3 +555,41 @@ let result = add(10,20);
 console.log(result);
 
 ```
+
+## optional function parameters
+
+```javascript
+function multiply(a: number, b: number, c?: number) : number {
+    if(typeof c !== 'undefined') {
+        return a * b * c;
+    }
+
+    return a * b;
+}
+```
+
+## Rest parameters
+
+A rest parameter allows a function to accept zero or more arguements of the specified type. In typescript, the rest parameter follow these rules:
+
+- A function has only one rest parameter
+- The rest parameter appears last in the parameter list
+- The type of the rest parameter is an array type
+
+```javascript
+function fn(...rest: type[]) {
+    // ..
+}
+
+// example -
+function getTotal(...numbers: number[]) : number {
+    let total = 0;
+    numbers.forEach((num) => total += num);
+
+    return total;
+}
+
+console.log(getTotal()); // 0
+console.log(getTotal(10, 20)); // 30
+console.log(getTotal(10, 20, 30)); // 60
+```
