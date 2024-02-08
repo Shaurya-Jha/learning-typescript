@@ -228,3 +228,22 @@ console.log(typeof(result));
 result = false;
 console.log(typeof(result));
 ```
+
+# Typescript void type
+
+The ``void`` type denotes the absence of having any type at all. It is a little like the opposite of the ``any`` type.
+
+> Typically, you use the ``void`` type as the return type of functions that do not return a value. For example:
+
+```javascript
+function log(message): void{
+    console.log(message);
+}
+```
+
+> It is a good practice to add the ``void`` type as the return type of a function or a method that doesn't return any value.
+
+```javascript
+let useless: void = undefined;
+useless = 1;        // error
+```
