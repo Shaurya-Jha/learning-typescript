@@ -50,6 +50,42 @@ const constant: type = value;
 let counter: number = 1;
 let name: string = 'John Doe'
 let isLoggedIn: boolean = false;
+
+// array annotation
+let names: string[] = ['John','Jane','Peter', 'David','Mary'];
+
+// objects annotation
+let person : {
+    name: string;
+    age: number
+};
+
+// declaring the values for the fields
+person = {
+    name: 'John',
+    age: 25
+};      // valid
 ```
 
-- Example - 
+# Typescript type inference
+
+- Type inference describes where and how Typescript infers types when you don't explicitly annotate them.
+
+### Basic type inference
+
+When you declare a variable , you can use a type annotation to explicitly specify a type for it.
+
+Example -
+```javascript
+let counter: number;
+```
+
+### Contextual typing
+
+Typescript uses the location of variables to infer their types. This mechanism is known as contextual typing.
+
+### Type inference v/s Type annotations
+
+The main difference we can say, between type inference and type annotation is that - 
+
+- type inference guesses the type on it's own while in type annotation we explicitly tell typescript the type 
