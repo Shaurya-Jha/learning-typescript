@@ -100,3 +100,27 @@ let price: number;
 // initialize the price variable to a number
 let price = 9.95;
 ```
+
+# Typescript string
+
+Typescript also supports template strings that use the backtick(`) to surround characters.
+
+# Typescript Boolean
+
+Typescript boolean has two values: ``true`` and ``false``. The boolean type is one of the primitive types in typescript.
+
+```javascript
+let pending: boolean;
+pending = true;
+
+// after a while
+pending = false;
+```
+
+### Boolean operator
+
+To manipulate boolean values, you use the boolean operators. They are as follows - 
+
+- AND - &&
+- OR - ||
+- NOT - !
