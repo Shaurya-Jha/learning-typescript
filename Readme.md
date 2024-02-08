@@ -143,3 +143,18 @@ employee = {
 
 console.log(employee);
 ```
+
+# Typescript array type
+
+A Typescript ``array`` is an ordered list of data. To declare an array that holds values of a specific type, use the following syntac:
+
+```javascript
+let arrayName: type[];
+
+// for string type array - this will carry array of only string type
+let skills: string[];
+
+// to add values to this array we can do this -
+skills[0] = 'Problem solving';
+skills[1] = 'Programming';
+```
