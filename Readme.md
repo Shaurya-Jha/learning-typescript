@@ -526,3 +526,32 @@ A function type has 2 parts :
 The following shows how to declare a variable which has a function type that accepts two numbers and returns a number:
 
 ``let add: (x: number, y: number) => number;``
+
+```javascript
+
+// 1st way we can use function is by defining variable with add
+add = function(x: number, y: number) {
+    return x+y;
+}
+
+// you can also declare a variable and assign a function to a variable like this:
+let add: (a: number, b: number) => number =
+    function (x: number, y: number) {
+        return x + y;
+    };
+
+```
+
+- Inference function types -
+
+```javascript
+
+let add = function (x: number, y: number) : number {
+    return x + y;
+}
+
+let result = add(10,20);
+
+console.log(result);
+
+```
