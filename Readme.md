@@ -593,3 +593,28 @@ console.log(getTotal()); // 0
 console.log(getTotal(10, 20)); // 30
 console.log(getTotal(10, 20, 30)); // 60
 ```
+
+# Classes
+
+JavaScript does not have a concept of class like other programming languages such as Java and C#. In ES5, you can use a constructor function and prototype inheritance to create a “class”.
+
+```javascript
+class Person {
+    ssn: string;
+    firstName: string;
+    lastName: string;
+
+    constructor(ssn: string, firstName: string, lastName: string) {
+        this.ssn = ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+let p1 = new Person('171-02-2580','John','Doe')
+console.log(p1.getFullName());
+```
