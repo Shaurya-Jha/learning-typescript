@@ -649,3 +649,17 @@ TypeScript provides the readonly modifier that allows you to mark the properties
 
     - In the property declaration.
     - In the constructor of the same class.
+
+# Interfaces
+
+Typescript interfaces define the contracts within your code. They also provide explicit names for type checking.
+
+Benefits of interfaces - 
+
+1. Type checking
+2. Contract definition
+3. Documentation and readability
+4. Reusability
+5. Code navigation and autocompletion
+6. Easier refactoring
+
