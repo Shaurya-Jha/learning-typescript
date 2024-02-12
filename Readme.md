@@ -618,3 +618,23 @@ class Person {
 let p1 = new Person('171-02-2580','John','Doe')
 console.log(p1.getFullName());
 ```
+
+### Access modifiers
+
+Access modifiers change the visibilty of the properties and methods of a class. Typescript provides three modifiers - 
+- private
+- public
+- protected
+
+#### private modifier
+
+The private modifier limits the visibility to the same class only. When you add the private modifier to a property or method, you can access that property or method within the same class. Any attempt to access private properties or methods outside the class will result in an error at compile time.
+
+```javascript
+class Person {
+    private ssn: string;
+    private firstName: string;
+    private lastName: string;
+    // ...
+}
+```
