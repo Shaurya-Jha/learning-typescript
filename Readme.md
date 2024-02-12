@@ -638,3 +638,14 @@ class Person {
     // ...
 }
 ```
+
+#### public modifier
+
+#### protected modifier
+
+### Readonly 
+
+TypeScript provides the readonly modifier that allows you to mark the properties of a class immutable. The assignment to a readonly property can only occur in one of two places:
+
+    - In the property declaration.
+    - In the constructor of the same class.
